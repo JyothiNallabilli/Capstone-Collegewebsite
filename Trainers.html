@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"crossorigin="anonymous"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <title>TRAINERS</title>
+</head>
+<style>
+    .bor{
+    border-left: .1px solid grey;
+}
+.fle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile{
+    font-size: 50px;
+}
+.bg-warning{
+    background: rgb(0, 255, 30);
+}
+.wid,.wid li
+{
+    height: 60px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.wid  li a{
+    height: 60px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;   
+}
+.wid  li a:hover{
+    color:rgb(7, 7, 7);  
+    background-color: white !important;  
+}
+.fs{
+    font-family: Haettenschweiler;
+    font-size: 40px;
+    color: rgb(8, 8, 8);
+    letter-spacing: 3px;
+}
+.fs-1{
+    font-family: Haettenschweiler;
+    font-size: 40px;
+    color: rgb(211, 210, 210) !important;
+    letter-spacing: 3px;
+}
+.fs-2{
+    font-family: Haettenschweiler;
+    font-size: 25px;
+    color: rgb(211, 210, 210) !important;
+    letter-spacing: 3px;
+    font-weight: lighter !important;
+}
+.active{
+    color:rgb(0, 255, 76) !important;
+}
+.bla{
+    font-family: Haettenschweiler;
+
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    color:black;
+}
+#blo{
+    display: block;
+}
+.navbar-link-toggle{
+    z-index: 1000 !important;
+    display: none;
+}
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url("https://thumbs.dreamstime.com/b/indian-college-girl-reading-book-library-pretty-41039730.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position:relative;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .container {
+  padding-top: 36px;
+}
+.myClass{
+    display:block;
+}
+@media only screen and (max-width:992px){
+    #blo,#bor{
+        display: none !important;
+    }
+
+    .navbar-link-toggle{
+        display: block;
+        position: fixed;
+        top:10px;
+        right:20px;
+        font-size: 24px;
+    }
+    /* .link-ul li:hover{
+        color:rgb(7, 7, 7);  
+        background-color: rgb(245, 185, 21) !important;  
+    } */
+    *{
+    transition: all 1s ease-in;
+
+    }
+    #list-link .ulli{
+        height: 60px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    #list-link .ulli :hover{
+        background-color: rgb(13, 202, 57) !important;
+        text-decoration: none !important;
+        color:#000;
+    }
+    .courses .course-item {
+  border-radius: 5px;
+  border: 1px solid #eef0ef;
+}
+
+.courses .course-content {
+  padding: 15px;
+}
+
+.courses .course-content h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.courses .course-content h3 a {
+  color: #37423b;
+  transition: 0.3s;
+}
+
+.courses .course-content h3 a:hover {
+  color: #5fcf80;
+}
+
+.courses .course-content p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.courses .course-content h4 {
+  font-size: 14px;
+  background: #5fcf80;
+  padding: 7px 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.courses .course-content .price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #37423b;
+}
+
+.courses .trainer {
+  padding-top: 15px;
+  border-top: 1px solid #eef0ef;
+}
+
+.courses .trainer .trainer-profile img {
+  max-width: 50px;
+  border-radius: 50px;
+}
+
+.courses .trainer .trainer-profile span {
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #5a6c60;
+}
+
+.courses .trainer .trainer-rank {
+  font-size: 18px;
+  color: #657a6d;
+}
+
+.trainers .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #eef0ef;
+}
+
+.trainers .member img {
+  margin: -1px -1px 20px -1px;
+}
+
+.trainers .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.trainers .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.trainers .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+.trainers .member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+.trainers .member .social {
+  margin-top: 15px;
+}
+
+.trainers .member .social a {
+  color: #7e9486;
+  transition: 0.3s;
+}
+
+.trainers .member .social a:hover {
+  color: #5fcf80;
+}
+
+.trainers .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+    
+}
+.footer-flex{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bg-dark{
+    background: rgb(26, 25, 25);
+}
+.col,.fs-1{
+    color: rgb(211, 210, 210) !important;
+}
+.icons{
+    height:30px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+
+}
+.icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(223, 75, 6);
+    color: black;
+    border-radius: 3px;
+    width:30px;
+    font-size: 20px;
+}
+.icons a:hover {
+    text-decoration: none !important;
+}
+.col p a i{
+    color:aliceblue;
+}
+.col p a:hover {
+    color:rgb(6, 223, 46) !important;
+    text-decoration: none !important;
+    margin-left: 5px !important;
+}
+.foot{
+    height:70px;
+    background:#04AA6D !important;
+    color:rgb(146, 147, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5px;
+}
+.inp{
+    width:65%;
+    height:30px;
+    outline: none;
+    border: 1px solid rgb(73, 201, 252);
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+
+}
+.inp:focus{
+    outline: none;
+    border: 1px solid rgb(73, 201, 252);
+    box-shadow: 0px 1px 5px 0 rgba(28, 215, 240, 0.452);
+}
+.btn{
+    border-radius:0px !important ;
+    border-top-right-radius:3px !important;
+    border-bottom-right-radius:3px !important;
+}
+.home-font{
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0px;
+    color: rgb(27, 22, 22);
+    font-size: 50px;
+}
+.btn-dark{
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    width:120px;
+    border-radius: 3px !important;
+}
+.home-1
+{
+    margin-left:6%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img-margin{
+    filter: grayscale(100%);
+
+}
+#list-link .ulli{
+    height: 60px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#list-link .ulli :hover{
+    background-color: rgb(13, 202, 54) !important;
+    text-decoration: none !important;
+    color:#000;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color:#04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: top;
+  margin: 5px;
+  bottom: 23px;
+  right: 28px;
+  width: 100px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.c0{
+    font-size: 1.8rem;
+}
+
+.fontStyle{
+    font-size: 2.5rem; 
+    border-left: 2px solid yellow; 
+    padding: 5px; 
+    color: gold;
+}
+
+#bg{
+    background-color: goldenrod;
+}
+
+.heading1{
+    font-size: 4.3rem;
+    margin-left: 2rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#p1{
+    margin-left: 2rem; 
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .hideClass{
+        display: none;
+    }
+}
+</style>
+<body>
+   <div class="container-fluid">
+    <div class="row">
+                <div class="col-md-10 bg-light">
+                    <div class="navbar-header" style="margin-top:20px;height:100px">
+                        <a href="" class="navbar-brand wid" style="align:justify"><span class="fs"><i class="fa fa-graduation-cap fa-2x" aria-hidden="true"  style="color:#04AA6D;padding-right: 50%;margin-left: 5%;margin-top: 10px;font-size:25px;"<p>EDUCAT</p></i><i></i></span></a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right wid" id="blo">
+                        <li><a href="Navbar.html" class="bla">HOME</a></li>
+                        <li><a href="About.html" class="bla">ABOUT</a></li>
+                        <li><a href="Courses.html" class="bla">COURSES</a></li>
+                        <li><a href="Trainers.html" class="bla active">TRAINERS</a></li>
+                        <li><a href="Contact.html" class="bla">CONTACT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2">
+                    
+                    
+                    <button class="open-button" onclick="openForm()">LOGIN</button>
+                    
+                    <div class="form-popup" id="myForm">
+                      <form action="/action_page.php" class="form-container">
+                        <h1>Login</h1>
+                    
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                    
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                      </form>
+                    </div>
+                    
+                    
+                </div>
+    </div>
+    <div class="container-fluid">
+        <div class="navbar-nav nav navbar-link-toggle navbar-right">
+            <button class="btn " onclick="myFunction()"><i class="fa-solid fa-bars"></i></button>
+            <script>
+                 function myFunction() {
+    var x = document.getElementById("list-link");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+            </script>
+        </div>
+        <ul class="link-ul" id="list-link" style="display: none ; list-style:none;flex-direction:column !important">
+                        <li><a href="Navbar.html" class="bla ulli">HOME</a></li>
+                        <li><a href="About.html" class="bla ulli">ABOUT</a></li>
+                        <li><a href="Courses.html" class="bla ulli">COURSES</a></li>
+                        <li><a href="Trainers.html" class="bla active ulli">TRAINERS</a></li>
+                        <li><a href="Contact.html" class="bla ulli">CONTACT</a></li>
+        </ul>
+    </div>
+   </div>
+</body>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+  <br><br><br>
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+        <div class="container-fluid" data-aos="fade-up">
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="member">
+                <img src="D:\BOOTSTRAP\Mentor\assets\img\trainers\trainer-1.jpg" alt="" style="height:300px">
+                <div class="member-content">
+                  <h4>Walter White</h4>
+                  <span>Web Development</span>
+                  <p>
+                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  </p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="member">
+                <img src="D:\BOOTSTRAP\Mentor\assets\img\trainers\trainer-2.jpg"  alt="" style="height:300px">
+                <div class="member-content">
+                  <h4>Sarah Jhinson</h4>
+                  <span>Marketing</span>
+                  <p>
+                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                  </p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="member">
+                <img src="D:\BOOTSTRAP\Mentor\assets\img\trainers\trainer-3.jpg" alt="" style="height:300px">
+                <div class="member-content">
+                  <h4>William Anderson</h4>
+                  <span>Content</span>
+                  <p>
+                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                  </p>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Trainers Section -->
+  
+    </main><!-- End #main -->
+    <br>
+<div class="container-fluid footer">
+    <div class="row bg-dark">
+        <div class="col-md-3">
+            <div class="bg-dark footer-flex">
+                <div class="col">
+                    <h1 class="fs-1" ><i class="fa fa-graduation-cap fa" aria-hidden="true" style="color:#04AA6D;padding-right: 20%;margin-left: 10%;margin-top: 10px;"<p>EDUCAT</p></i><i></i></h1>
+                    <p style="color:rgb(148, 147, 147);">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, totam ipsa et ullam minima quia similique voluptatibus.</p>
+                    <h5 style="font-family: Haettenschweiler;letter-spacing:1.5px;color:rgb(148, 147, 147);">FOLLOW US</h5>
+                    <div class="icons">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-rss"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a href=""><i class="fa fa-pinterest-p"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="bg-dark footer-flex">
+                <div class="col">
+                    <h1 class="fs-2" >GET IN TOUCH</h1>
+                    <p style="color:rgb(148, 147, 147);"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; +91&nbsp;1234567890</p>
+                    <p  style="color:rgb(148, 147, 147);"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; xyz@gmail.com</p>
+                    <p  style="color:rgb(148, 147, 147);"><i class="fa-solid fa-globe"></i>&nbsp;&nbsp; www.example.com</p>
+                    <p style="color:rgb(148, 147, 147);"><i class="fa-solid fa-location-pin"></i>&nbsp;&nbsp; Surampalem,AndhraPradesh,India</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="bg-dark footer-flex">
+                <div class="col">
+                    <h1 class="fs-2" >USEFUL LINKS</h1>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Teacher & staff</a> </p>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Our courses</a> </p>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Courses Categories </a> </p>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Support</a> </p>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Terams & Conditions</a> </p>
+                    <p> <a href=""><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp; Privacy Policy</a> </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="bg-dark footer-flex">
+                <div class="col">
+                    <form action="" style="display: flex;justify-content:center;align-items:center;"> 
+                        <input class="inp" type="email" name="" id="" style="color:black";>
+                        <button class="btn btn-success" style="width: auto;height:30px; color:black;font-family:Verdana, Geneva, Tahoma, sans-serif;font-weight:bolder;">Subscribe</button>           
+                    </form>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="fs-2" >INSTAGRAM</h1>
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1vf9CfGgC3PVpUFGnJeGjs194C-q1H3I1Dw&usqp=CAU" style="height:60px">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRL3Fz9OLfv6XC4nUqcLZPzmvVD44TfwiHw&usqp=CAU" style="height:60px">
+                             </div>
+                            <div class="col-md-4">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvEZU9fdo6h1C5friz2uHt6UlbKPNaWXx15g&usqp=CAU" style="height:60px">
+                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h1 class="fs-2" ></h1>
+                            <div class="col-md-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1vf9CfGgC3PVpUFGnJeGjs194C-q1H3I1Dw&usqp=CAU" style="height:60px">
+                                </div>
+                                <div class="col-md-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRL3Fz9OLfv6XC4nUqcLZPzmvVD44TfwiHw&usqp=CAU" style="height:60px">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvEZU9fdo6h1C5friz2uHt6UlbKPNaWXx15g&usqp=CAU" style="height:60px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid foot">
+    <p style="padding: 0; margin:0; font-size:16px; color:#ddd"> © <span style="color:white">Site Name</span> All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy policy &nbsp; Terms and Conditions</p>
+</div>
+</body>
+</html>
+    
